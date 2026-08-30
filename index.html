@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Italiana&family=Jost:wght@200;300;400;500&family=Newsreader:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="assets/css/styles.css?v=3">
+<link rel="stylesheet" href="assets/css/styles.css?v=4">
 <link rel="preload" as="image" href="assets/img/f_pool.jpg" imagesrcset="assets/img/f_pool-900.jpg 900w, assets/img/f_pool.jpg 2100w" imagesizes="100vw">
 <style>html{color-scheme:light dark}body{margin:0}</style>
 </head>
@@ -251,10 +251,10 @@
         <p>El agua por la mañana, la terraza al atardecer, la fachada cuando se enciende y la llegada a la casa. Piezas cortas para hacerse una idea real antes de venir.</p>
       </div>
       <div class="fvert rv">
-        <figure data-cap="El agua"><span class="play"></span><img src="assets/img/v_pool.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la piscina y la fachada"><figcaption>El agua</figcaption></figure>
-        <figure data-cap="La hora azul"><span class="play"></span><img src="assets/img/v_dusk.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la casa encendida al anochecer"><figcaption>La hora azul</figcaption></figure>
-        <figure data-cap="La terraza alta"><span class="play"></span><img src="assets/img/v_terr.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la terraza alta"><figcaption>La terraza alta</figcaption></figure>
-        <figure data-cap="La llegada"><span class="play"></span><img src="assets/img/v_sign.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: el rótulo de la casa"><figcaption>La llegada</figcaption></figure>
+        <figure data-cap="En movimiento · 1" data-video="assets/video/reel-1.mp4"><span class="play"></span><img src="assets/img/v_pool.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la piscina y la fachada"><figcaption>El agua</figcaption></figure>
+        <figure data-cap="En movimiento · 2" data-video="assets/video/reel-2.mp4"><span class="play"></span><img src="assets/img/v_dusk.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la casa encendida al anochecer"><figcaption>La hora azul</figcaption></figure>
+        <figure data-cap="La terraza alta"><img src="assets/img/v_terr.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la terraza alta"><figcaption>La terraza alta</figcaption></figure>
+        <figure data-cap="La llegada"><img src="assets/img/v_sign.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: el rótulo de la casa"><figcaption>La llegada</figcaption></figure>
       </div>
       <p style="margin:6px 0 0; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#8D96A3">Toque cualquiera para reproducirlo a pantalla completa</p>
     </div>
@@ -268,7 +268,7 @@
         <p>El vídeo le cuenta cómo se vive la villa, el dron le enseña dónde está y a qué distancia queda el mar, y el tour de 360° le deja recorrerla habitación por habitación.</p>
       </div>
       <div class="fmedia rv">
-        <button type="button" class="fmcard" data-cap="Vídeo de la villa · 1:40">
+        <button type="button" class="fmcard" data-cap="Vídeo de la villa" data-video="assets/video/villa.mp4">
           <img src="assets/img/f_dusk.jpg" srcset="assets/img/f_dusk-900.jpg 900w, assets/img/f_dusk.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" fetchpriority="high" alt="Vídeo de la villa">
           <span class="badge">▶ Vídeo · 1:40</span>
           <span class="ov"><b>La casa en movimiento</b><span>Del mediodía a la hora azul</span></span>
@@ -290,7 +290,7 @@
       <div class="fsec__h rv">
         <span class="lbl">Galería</span>
         <h2>La casa en imágenes.</h2>
-        <p>Arquitectura y piscina, terrazas y vistas, interiores y la hora azul. Elija qué quiere ver y toque una foto para ampliarla.</p>
+        <p>Arquitectura y piscina, terrazas y vistas, interiores, la hora azul e imágenes en altura. Elija qué quiere ver y toque una foto para ampliarla.</p>
       </div>
       <div class="fchips" role="group" aria-label="Filtrar galería">
         <button class="fchip" aria-pressed="true"  data-ff="all">Todo</button>
@@ -298,6 +298,7 @@
         <button class="fchip" aria-pressed="false" data-ff="ter">Terrazas y vistas</button>
         <button class="fchip" aria-pressed="false" data-ff="int">Interiores</button>
         <button class="fchip" aria-pressed="false" data-ff="noc">La hora azul</button>
+        <button class="fchip" aria-pressed="false" data-ff="dron">Imágenes en altura</button>
       </div>
       <div class="fgrid" id="fgrid">
         <button type="button" data-c="arq" data-cap="La piscina y la fachada"><img src="assets/img/f_pool.jpg" srcset="assets/img/f_pool-900.jpg 900w, assets/img/f_pool.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" fetchpriority="high" alt="Piscina y fachada"></button>
@@ -316,6 +317,13 @@
         <button type="button" data-c="noc" data-cap="La piscina al anochecer"><img src="assets/img/b_pool2.jpg" srcset="assets/img/b_pool2-900.jpg 900w, assets/img/b_pool2.jpg 1500w" sizes="100vw" width="1500" height="1000" decoding="async" loading="lazy" alt="Piscina al anochecer"></button>
         <button type="button" data-c="noc" data-cap="La fachada encendida"><img src="assets/img/b_villa.jpg" srcset="assets/img/b_villa-900.jpg 900w, assets/img/b_villa.jpg 2000w" sizes="100vw" width="2000" height="1333" decoding="async" loading="lazy" alt="Fachada iluminada"></button>
         <button type="button" data-c="noc" data-cap="El jardín de olivos"><img src="assets/img/b_jard.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="Jardín de olivos"></button>
+        <button type="button" data-c="dron" data-cap="La villa y el mar al fondo"><img src="assets/img/d_05.jpg" srcset="assets/img/d_05-900.jpg 900w, assets/img/d_05.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="Vista aérea de la villa con el mar al fondo"></button>
+        <button type="button" data-c="dron" data-cap="El pueblo y la costa en el horizonte"><img src="assets/img/d_03.jpg" srcset="assets/img/d_03-900.jpg 900w, assets/img/d_03.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="Vista aérea con la costa en el horizonte"></button>
+        <button type="button" data-c="dron" data-cap="La piscina y la terraza, a vista de pájaro"><img src="assets/img/d_06.jpg" srcset="assets/img/d_06-900.jpg 900w, assets/img/d_06.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="Vista aérea de la piscina y la terraza"></button>
+        <button type="button" data-c="dron" data-cap="La piscina desde el aire"><img src="assets/img/d_04.jpg" srcset="assets/img/d_04-900.jpg 900w, assets/img/d_04.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="Vista aérea de la piscina y la villa"></button>
+        <button type="button" data-c="dron" data-cap="La parcela entre colinas"><img src="assets/img/d_02.jpg" srcset="assets/img/d_02-900.jpg 900w, assets/img/d_02.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="Vista aérea de la parcela entre colinas"></button>
+        <button type="button" data-c="dron" data-cap="La casa y las montañas de Marbella"><img src="assets/img/d_01.jpg" srcset="assets/img/d_01-900.jpg 900w, assets/img/d_01.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="Vista aérea de la casa con las montañas al fondo"></button>
+        <button type="button" data-c="dron" data-cap="Vista cenital de toda la parcela"><img src="assets/img/d_07.jpg" srcset="assets/img/d_07-900.jpg 900w, assets/img/d_07.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="Vista cenital de la parcela"></button>
       </div>
     </section>
 
@@ -468,10 +476,11 @@
 <div id="hlight" role="dialog" aria-modal="true" aria-label="Ampliación de la fotografía">
   <button class="cls" type="button" aria-label="Cerrar">✕</button>
   <img alt="">
+  <video playsinline controls preload="metadata"></video>
   <span class="cap"></span>
 </div>
 
 </main>
-<script src="assets/js/app.js?v=3"></script>
+<script src="assets/js/app.js?v=4"></script>
 </body>
 </html>

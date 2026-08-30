@@ -26,6 +26,12 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# ── Vídeos: pesan y no cambian; se cachean un año ────────────────────────────
+[[headers]]
+  for = "/assets/video/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # ── CSS y JS: una semana, y se revalidan al desplegar ────────────────────────
 [[headers]]
   for = "/assets/css/*"

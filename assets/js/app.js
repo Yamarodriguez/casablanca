@@ -83,10 +83,17 @@
   /* ---------- visor de fotografía ---------- */
   var light = document.getElementById("hlight");
   var lightImg = light.querySelector("img");
+  var lightVid = light.querySelector("video");
   var lightCap = light.querySelector(".cap");
   var lastFocus = null;
 
-  function closeLight(){ light.classList.remove("on"); if (lastFocus) { lastFocus.focus(); lastFocus = null; } }
+  function closeLight(){
+    light.classList.remove("on", "video");
+    lightVid.pause();
+    lightVid.removeAttribute("src");
+    lightVid.load();
+    if (lastFocus) { lastFocus.focus(); lastFocus = null; }
+  }
 
   // el visor sirve a la galería y a las piezas de vídeo
   var media = Array.prototype.slice.call(document.querySelectorAll(".fmcard, .fvert figure"));
@@ -98,10 +105,18 @@
   fshots.concat(media).forEach(function(s){
     s.addEventListener("click", function(){
       lastFocus = s;
-      lightImg.src = s.querySelector("img").src;
-      lightImg.alt = s.querySelector("img").alt;
       lightCap.textContent = s.dataset.cap || "";
-      light.classList.add("on");
+      if (s.dataset.video) {
+        lightVid.poster = s.querySelector("img").src;
+        lightVid.src = s.dataset.video;
+        light.classList.add("on", "video");
+        lightVid.play().catch(function(){});
+      } else {
+        lightImg.src = s.querySelector("img").src;
+        lightImg.alt = s.querySelector("img").alt;
+        light.classList.remove("video");
+        light.classList.add("on");
+      }
       light.querySelector(".cls").focus();
     });
   });

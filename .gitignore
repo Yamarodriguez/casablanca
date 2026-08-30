@@ -16,3 +16,7 @@ node_modules/
 
 # Servidor local de pruebas
 srv.log
+
+# Vídeos: superan el límite de 100 MB de GitHub; se alojan aparte
+# (Netlify no sirve Git LFS). Ver README para cómo publicarlos.
+assets/video/*.mp4
