@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Italiana&family=Jost:wght@200;300;400;500&family=Newsreader:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="assets/css/styles.css?v=4">
+<link rel="stylesheet" href="assets/css/styles.css?v=5">
 <link rel="preload" as="image" href="assets/img/f_pool.jpg" imagesrcset="assets/img/f_pool-900.jpg 900w, assets/img/f_pool.jpg 2100w" imagesizes="100vw">
 <style>html{color-scheme:light dark}body{margin:0}</style>
 </head>
@@ -251,8 +251,8 @@
         <p>El agua por la mañana, la terraza al atardecer, la fachada cuando se enciende y la llegada a la casa. Piezas cortas para hacerse una idea real antes de venir.</p>
       </div>
       <div class="fvert rv">
-        <figure data-cap="En movimiento · 1" data-video="assets/video/reel-1.mp4"><span class="play"></span><img src="assets/img/v_pool.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la piscina y la fachada"><figcaption>El agua</figcaption></figure>
-        <figure data-cap="En movimiento · 2" data-video="assets/video/reel-2.mp4"><span class="play"></span><img src="assets/img/v_dusk.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la casa encendida al anochecer"><figcaption>La hora azul</figcaption></figure>
+        <figure data-cap="El agua" data-embed=""><span class="play"></span><img src="assets/img/v_pool.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la piscina y la fachada"><figcaption>El agua</figcaption></figure>
+        <figure data-cap="La hora azul" data-embed=""><span class="play"></span><img src="assets/img/v_dusk.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la casa encendida al anochecer"><figcaption>La hora azul</figcaption></figure>
         <figure data-cap="La terraza alta"><img src="assets/img/v_terr.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la terraza alta"><figcaption>La terraza alta</figcaption></figure>
         <figure data-cap="La llegada"><img src="assets/img/v_sign.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: el rótulo de la casa"><figcaption>La llegada</figcaption></figure>
       </div>
@@ -268,7 +268,7 @@
         <p>El vídeo le cuenta cómo se vive la villa, el dron le enseña dónde está y a qué distancia queda el mar, y el tour de 360° le deja recorrerla habitación por habitación.</p>
       </div>
       <div class="fmedia rv">
-        <button type="button" class="fmcard" data-cap="Vídeo de la villa" data-video="assets/video/villa.mp4">
+        <button type="button" class="fmcard" data-cap="Vídeo de la villa" data-embed="">
           <img src="assets/img/f_dusk.jpg" srcset="assets/img/f_dusk-900.jpg 900w, assets/img/f_dusk.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" fetchpriority="high" alt="Vídeo de la villa">
           <span class="badge">▶ Vídeo · 1:40</span>
           <span class="ov"><b>La casa en movimiento</b><span>Del mediodía a la hora azul</span></span>
@@ -476,11 +476,11 @@
 <div id="hlight" role="dialog" aria-modal="true" aria-label="Ampliación de la fotografía">
   <button class="cls" type="button" aria-label="Cerrar">✕</button>
   <img alt="">
-  <video playsinline controls preload="metadata"></video>
+  <div class="frame"><iframe title="Vídeo" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
   <span class="cap"></span>
 </div>
 
 </main>
-<script src="assets/js/app.js?v=4"></script>
+<script src="assets/js/app.js?v=5"></script>
 </body>
 </html>

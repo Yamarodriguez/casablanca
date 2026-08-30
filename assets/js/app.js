@@ -83,15 +83,23 @@
   /* ---------- visor de fotografía ---------- */
   var light = document.getElementById("hlight");
   var lightImg = light.querySelector("img");
-  var lightVid = light.querySelector("video");
+  var lightFrame = light.querySelector(".frame iframe");
   var lightCap = light.querySelector(".cap");
   var lastFocus = null;
 
+  // Convierte un enlace normal de YouTube/Vimeo en su URL para incrustar.
+  function embedUrl(url){
+    var m;
+    if ((m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([\w-]{11})/)))
+      return "https://www.youtube.com/embed/" + m[1] + "?autoplay=1&rel=0";
+    if ((m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/)))
+      return "https://player.vimeo.com/video/" + m[1] + "?autoplay=1";
+    return url; // ya es una URL de incrustar
+  }
+
   function closeLight(){
     light.classList.remove("on", "video");
-    lightVid.pause();
-    lightVid.removeAttribute("src");
-    lightVid.load();
+    lightFrame.removeAttribute("src");
     if (lastFocus) { lastFocus.focus(); lastFocus = null; }
   }
 
@@ -106,11 +114,10 @@
     s.addEventListener("click", function(){
       lastFocus = s;
       lightCap.textContent = s.dataset.cap || "";
-      if (s.dataset.video) {
-        lightVid.poster = s.querySelector("img").src;
-        lightVid.src = s.dataset.video;
+      // Si hay un enlace de vídeo (Vimeo/YouTube), se incrusta; si no, se ve la foto.
+      if (s.dataset.embed) {
+        lightFrame.src = embedUrl(s.dataset.embed);
         light.classList.add("on", "video");
-        lightVid.play().catch(function(){});
       } else {
         lightImg.src = s.querySelector("img").src;
         lightImg.alt = s.querySelector("img").alt;
