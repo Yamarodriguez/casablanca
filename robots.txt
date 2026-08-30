@@ -1,0 +1,4 @@
+# Boceto en revisión: fuera de los buscadores.
+# Al dar la web por buena, dejar solo:  User-agent: *  /  Allow: /
+User-agent: *
+Disallow: /

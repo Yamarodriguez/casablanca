@@ -1,0 +1,47 @@
+# Casablanca Bellevue 131 — configuración de Netlify
+# Sitio estático: no hay build, se publica la raíz del repositorio tal cual.
+
+[build]
+  publish = "."
+  command = ""
+
+# ── Cabeceras de seguridad para todo el sitio ────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+
+# ── El HTML no se cachea: así un cambio se ve al instante ────────────────────
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ── Fotografías: cambian poco y pesan; se cachean un año ─────────────────────
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ── CSS y JS: una semana, y se revalidan al desplegar ────────────────────────
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, must-revalidate"
+
+# ── Mientras sea un boceto, fuera de los buscadores ──────────────────────────
+# Cuando la web se dé por buena: borrar este bloque, quitar la etiqueta
+# <meta name="robots" content="noindex, nofollow"> de index.html
+# y vaciar el Disallow de robots.txt.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

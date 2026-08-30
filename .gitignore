@@ -1,0 +1,18 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Netlify
+.netlify/
+
+# Nada de esto hace falta: el sitio es estático
+node_modules/
+
+# Servidor local de pruebas
+srv.log
