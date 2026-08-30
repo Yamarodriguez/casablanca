@@ -221,13 +221,13 @@ a{ color:inherit; text-decoration:none; }
 #viewF .ftab{ padding:12px 18px; font-size:14px; font-weight:500; color:var(--f-muted); white-space:nowrap; border-bottom:2px solid transparent; margin-bottom:-1px; transition:color .2s, border-color .2s; }
 #viewF .ftab:hover{ color:var(--f-ink); }
 #viewF .ftab[aria-selected="true"]{ color:var(--f-sea); border-bottom-color:var(--f-sea); }
-#viewF .fpanel{ display:none; grid-template-columns:1.3fr 1fr; gap:44px; align-items:center; }
+#viewF .fpanel{ display:none; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
 #viewF .fpanel.on{ display:grid; animation:fade .4s ease both; }
 #viewF .fpanel img{ width:100%; aspect-ratio:3/2; object-fit:cover; }
-#viewF .fpanel h3{ font-size:27px; margin:0 0 12px; }
-#viewF .fpanel p{ margin:0 0 20px; font-size:15px; line-height:1.75; color:var(--f-muted); }
+#viewF .fpanel h3{ font-size:29px; margin:0 0 14px; }
+#viewF .fpanel p{ margin:0 0 24px; font-size:16px; line-height:1.8; color:var(--f-muted); }
 #viewF .fpanel ul{ list-style:none; margin:0; padding:0; border-top:1px solid var(--f-line); }
-#viewF .fpanel li{ padding:10px 0; border-bottom:1px solid var(--f-line); font-size:14px; display:flex; justify-content:space-between; gap:16px; }
+#viewF .fpanel li{ padding:12px 0; border-bottom:1px solid var(--f-line); font-size:15px; display:flex; justify-content:space-between; gap:16px; }
 #viewF .fpanel li span:last-child{ color:var(--f-muted); text-align:right; }
 @media (max-width:900px){ #viewF .fpanel.on{ grid-template-columns:1fr; gap:24px; } }
 
