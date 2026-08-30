@@ -29,7 +29,8 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
-img{ display:block; max-width:100%; }
+/* height:auto deja que el aspect-ratio del CSS mande sobre el atributo height del HTML */
+img{ display:block; max-width:100%; height:auto; }
 button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; }
 a{ color:inherit; text-decoration:none; }
 
@@ -136,7 +137,8 @@ a{ color:inherit; text-decoration:none; }
 #viewF .fstage img.on{ opacity:1; }
 #viewF .fveil{
   position:absolute; inset:0; transition:background 1.8s ease;
-  background:linear-gradient(180deg,rgba(10,18,20,.40) 0%,rgba(10,18,20,.06) 40%,rgba(10,18,20,.52) 100%);
+  background:radial-gradient(95% 75% at 50% 44%, rgba(8,14,18,.46) 0%, rgba(8,14,18,0) 62%),
+             linear-gradient(180deg,rgba(10,18,20,.34) 0%,rgba(10,18,20,.04) 46%,rgba(10,18,20,.52) 100%);
 }
 #viewF .fhero.is-night .fveil{
   background:radial-gradient(115% 90% at 50% 60%, rgba(8,12,20,.20) 0%, rgba(8,12,20,.80) 100%),
