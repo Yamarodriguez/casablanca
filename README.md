@@ -99,7 +99,8 @@ automático.
       las vistas al mar
 - [ ] Tarifas reales por temporada
 - [ ] Conectar las opiniones con Google y los portales
-- [ ] Integrar vídeo, dron y tour 360° (ahora hay fotografía fija en su sitio)
+- [x] Galería de imágenes en altura (dron)
+- [ ] Conectar los vídeos (Vimeo/YouTube: rellenar `data-embed`) y el tour 360°
 - [ ] Conectar el formulario de reserva con el motor y una pasarela de pago
 - [ ] Quitar `noindex`: la etiqueta de `index.html`, el bloque `X-Robots-Tag`
       de `netlify.toml` y el `Disallow` de `robots.txt`
@@ -116,6 +117,15 @@ automático.
 - **Tipografías**: Cormorant Garamond y Archivo desde Google Fonts. Italiana,
   Jost y Newsreader solo las usan las propuestas A, B y C; si se borran esas
   vistas, se pueden quitar del `<link>` de `index.html`.
+- **Vídeos**: no se guardan en el repositorio (GitHub rechaza archivos de más
+  de 100 MB y Netlify ya no sirve Git LFS). Se alojan en **Vimeo o YouTube** y se
+  incrustan en el visor a pantalla completa. Para conectar uno, ponga el enlace
+  del vídeo en el atributo `data-embed` del botón correspondiente de la galería
+  «En movimiento» o de las tarjetas «Véala entera» en `index.html`. Sirve el
+  enlace normal (`vimeo.com/123…`, `youtu.be/…`, `youtube.com/watch?v=…`); el
+  JavaScript lo convierte solo al formato de incrustar. Si el atributo queda
+  vacío, el botón muestra la fotografía. Los archivos originales para subir a
+  Vimeo/YouTube están en `assets/video/` (fuera de git).
 - **Sin dependencias**: nada de frameworks ni de `npm install`.
 - **Accesibilidad**: `prefers-reduced-motion` detiene el paso automático del
   hero y las apariciones al hacer scroll.
