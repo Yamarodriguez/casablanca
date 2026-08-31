@@ -36,27 +36,34 @@
     form.querySelector('[data-k="save"]').textContent = "Ahorra " + eur(save) + " frente al mismo alojamiento en portales.";
   }
 
-  /* ---------- hero: del mediodía a la hora azul ---------- */
-  var fhero  = document.getElementById("fhero");
-  var slides = Array.prototype.slice.call(fhero.querySelectorAll(".fstage img"));
-  var hours  = Array.prototype.slice.call(fhero.querySelectorAll(".fhours button"));
-  var slide = 0, heroTimer = null;
-
-  function setSlide(i){
-    slide = i;
-    slides.forEach(function(im, n){ im.classList.toggle("on", n === i); });
-    hours.forEach(function(b, n){ b.setAttribute("aria-pressed", String(n === i)); });
-    fhero.classList.toggle("is-night", i === 1);
+  /* ---------- vídeo de fondo ambiente (Vimeo/YouTube) ----------
+     Cualquier elemento con [data-bg-embed] no vacío recibe un vídeo
+     silencioso en bucle detrás de su fotografía. Vacío = solo foto. */
+  function bgEmbedUrl(url){
+    var m;
+    if ((m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/|youtube\.com\/embed\/)([\w-]{11})/))){
+      var id = m[1];
+      return "https://www.youtube.com/embed/" + id +
+             "?autoplay=1&mute=1&loop=1&controls=0&playsinline=1&modestbranding=1&rel=0&playlist=" + id;
+    }
+    if ((m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/)))
+      return "https://player.vimeo.com/video/" + m[1] + "?background=1&autoplay=1&loop=1&muted=1";
+    return url;
   }
-  function autoHero(){
-    clearInterval(heroTimer);
-    if (reduce) return;                       // sin movimiento automático si se pide reducirlo
-    heroTimer = setInterval(function(){ setSlide((slide + 1) % slides.length); }, 7000);
+  if (!reduce){
+    Array.prototype.forEach.call(document.querySelectorAll("[data-bg-embed]"), function(el){
+      var src = el.getAttribute("data-bg-embed");
+      if (!src) return;                       // sin enlace todavía: se queda la foto
+      var img = el.querySelector("img");
+      var f = document.createElement("iframe");
+      f.className = "bgvid";
+      f.title = "Vídeo ambiente";
+      f.setAttribute("allow", "autoplay; fullscreen");
+      f.setAttribute("frameborder", "0");
+      f.src = bgEmbedUrl(src);
+      el.insertBefore(f, img ? img.nextSibling : el.firstChild);
+    });
   }
-  hours.forEach(function(b, n){
-    b.addEventListener("click", function(){ setSlide(n); autoHero(); });
-  });
-  autoHero();
 
   /* ---------- pestañas de espacios ---------- */
   var ftabs = Array.prototype.slice.call(document.querySelectorAll(".ftab"));

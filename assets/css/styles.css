@@ -377,3 +377,114 @@ a{ color:inherit; text-decoration:none; }
   border:1px solid rgba(255,255,255,.4); border-radius:50%; font-size:20px; line-height:1;
 }
 #hlight .cap{ position:absolute; left:0; right:0; bottom:22px; text-align:center; color:rgba(255,255,255,.82); font-size:13px; }
+
+/* ============================================================
+   REDISEÑO — experiencia privada (Acto I cinematográfico)
+   ============================================================ */
+
+/* --- portada --- */
+#viewF .fmv{ position:absolute; inset:0; overflow:hidden; background:#0B1017; z-index:0; }
+#viewF .fmv__img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+#viewF .fhero .fveil{ z-index:2; }
+#viewF .fhero__type{ z-index:3; }
+#viewF .fhero__tag{
+  margin:22px 0 0 !important; font-family:"Cormorant Garamond",Georgia,serif; font-weight:300;
+  font-style:normal !important; font-size:clamp(34px,6vw,66px) !important; line-height:1 !important;
+  letter-spacing:.01em; text-shadow:0 3px 30px rgba(0,0,0,.55);
+}
+#viewF .fhero__sub{
+  margin:16px 0 0 !important; font-family:"Cormorant Garamond",Georgia,serif; font-weight:300;
+  font-style:italic; font-size:clamp(16px,2.2vw,23px) !important; color:rgba(255,255,255,.9);
+  text-shadow:0 2px 18px rgba(0,0,0,.5);
+}
+#viewF .fhero__cta{
+  display:inline-block; margin-top:32px; padding:14px 30px; border:1px solid rgba(255,255,255,.7);
+  border-radius:2px; color:#fff; font-size:12px; letter-spacing:.2em; text-transform:uppercase;
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); background:rgba(12,18,24,.22);
+  transition:background .3s, border-color .3s;
+}
+#viewF .fhero__cta:hover{ background:rgba(255,255,255,.14); border-color:#fff; }
+#viewF .fhero__down{
+  position:absolute; left:50%; bottom:78px; transform:translateX(-50%); z-index:3;
+  width:28px; height:44px; border:1px solid rgba(255,255,255,.55); border-radius:16px;
+  display:grid; place-items:start center; padding-top:8px;
+}
+#viewF .fhero__down span{ width:4px; height:8px; border-radius:2px; background:#fff; animation:fdown 1.7s ease-in-out infinite; }
+@keyframes fdown{ 0%{opacity:0;transform:translateY(0)} 30%{opacity:1} 100%{opacity:0;transform:translateY(12px)} }
+@media (max-width:900px){ #viewF .fhero__down{ display:none; } }
+@media (prefers-reduced-motion:reduce){ #viewF .fhero__down span{ animation:none; } }
+
+/* --- vídeo de fondo inyectado (Vimeo/YouTube background) --- */
+#viewF .bgvid{
+  position:absolute; top:50%; left:50%; width:100vw; height:56.25vw;
+  min-height:100%; min-width:177.78vh; transform:translate(-50%,-50%);
+  border:0; pointer-events:none; z-index:1;
+}
+
+/* --- experiencia a pantalla --- */
+#viewF .fexp{ position:relative; height:clamp(460px,82vh,820px); overflow:hidden; background:#0B1017; padding:0; }
+#viewF .fexp__img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+#viewF .fexp__veil{
+  position:absolute; inset:0; z-index:2;
+  background:linear-gradient(90deg, rgba(8,14,18,.72) 0%, rgba(8,14,18,.22) 42%, rgba(8,14,18,0) 72%),
+             linear-gradient(180deg, rgba(8,14,18,.10) 0%, rgba(8,14,18,0) 40%, rgba(8,14,18,.42) 100%);
+}
+#viewF .fexp--right .fexp__veil{
+  background:linear-gradient(270deg, rgba(8,14,18,.72) 0%, rgba(8,14,18,.22) 42%, rgba(8,14,18,0) 72%),
+             linear-gradient(180deg, rgba(8,14,18,.10) 0%, rgba(8,14,18,0) 40%, rgba(8,14,18,.42) 100%);
+}
+#viewF .fexp--dark .fexp__veil{
+  background:linear-gradient(90deg, rgba(6,9,14,.84) 0%, rgba(6,9,14,.46) 48%, rgba(6,9,14,.30) 100%);
+}
+#viewF .fexp--dark.fexp--right .fexp__veil{
+  background:linear-gradient(270deg, rgba(6,9,14,.84) 0%, rgba(6,9,14,.46) 48%, rgba(6,9,14,.30) 100%);
+}
+#viewF .fexp__type{ position:absolute; inset:0; z-index:3; display:flex; align-items:center; }
+#viewF .fexp__type > div{ max-width:1220px; margin:0 auto; padding:0 34px; width:100%; }
+#viewF .fexp--right .fexp__type > div{ text-align:right; }
+#viewF .fexp__type .lbl{ color:#fff; opacity:.9; }
+#viewF .fexp--dark .fexp__type .lbl{ color:var(--f-brass); opacity:1; }
+#viewF .fexp h2{ color:#fff; font-size:clamp(30px,5vw,58px); margin:14px 0 0; max-width:17ch; text-shadow:0 3px 30px rgba(0,0,0,.5); }
+#viewF .fexp--right h2{ margin-left:auto; }
+#viewF .fexp p{ margin:18px 0 0; max-width:34ch; font-size:16.5px; line-height:1.7; color:rgba(255,255,255,.92); text-shadow:0 2px 16px rgba(0,0,0,.5); }
+#viewF .fexp--right p{ margin-left:auto; }
+@media (max-width:700px){
+  #viewF .fexp{ height:auto; min-height:76vh; }
+  #viewF .fexp__type{ align-items:flex-end; padding-bottom:42px; }
+  #viewF .fexp__type > div, #viewF .fexp--right .fexp__type > div{ padding:0 20px; text-align:left; }
+  #viewF .fexp--right h2, #viewF .fexp--right p{ margin-left:0; }
+  #viewF .fexp__veil, #viewF .fexp--right .fexp__veil,
+  #viewF .fexp--dark .fexp__veil, #viewF .fexp--dark.fexp--right .fexp__veil{
+    background:linear-gradient(180deg, rgba(8,14,18,.14) 0%, rgba(8,14,18,0) 26%, rgba(8,14,18,.78) 100%);
+  }
+}
+
+/* --- del día a la noche --- */
+#viewF .fdn{ position:relative; height:clamp(460px,82vh,820px); overflow:hidden; background:#0B1017; }
+#viewF .fdn__stage{ position:absolute; inset:0; z-index:0; }
+#viewF .fdn__stage img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+#viewF .fdn__b{ opacity:0; animation:fdncross 13s ease-in-out infinite; }
+@keyframes fdncross{ 0%,34%{opacity:0} 48%,90%{opacity:1} 100%{opacity:0} }
+#viewF .fdn .fexp__veil{ background:linear-gradient(180deg, rgba(8,12,20,.30) 0%, rgba(8,12,20,.05) 40%, rgba(8,12,20,.64) 100%); }
+#viewF .fdn .fexp__type{ align-items:flex-end; padding-bottom:6vh; }
+#viewF .fdn .lbl{ color:var(--f-brass); opacity:1; }
+@media (prefers-reduced-motion:reduce){ #viewF .fdn__b{ animation:none; opacity:1; } }
+
+/* --- espacios como experiencias --- */
+#viewF .frooms{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+#viewF .froom{ position:relative; overflow:hidden; }
+#viewF .froom img{ width:100%; aspect-ratio:4/5; object-fit:cover; transition:transform .8s cubic-bezier(.2,.7,.3,1); }
+#viewF .froom:hover img{ transform:scale(1.05); }
+#viewF .froom > div{ position:absolute; left:0; right:0; bottom:0; padding:64px 22px 22px; color:#fff;
+  background:linear-gradient(180deg, transparent, rgba(8,14,18,.80)); }
+#viewF .froom h3{ font-size:24px; margin:0; color:#fff; }
+#viewF .froom p{ margin:8px 0 0; font-size:14px; line-height:1.6; color:rgba(255,255,255,.86); }
+@media (max-width:820px){ #viewF .frooms{ grid-template-columns:1fr; } #viewF .froom img{ aspect-ratio:16/10; } }
+
+/* --- la casa en detalle --- */
+#viewF .fdetail{ display:grid; grid-template-columns:repeat(2,1fr); gap:6px 48px; }
+#viewF .fdetail h3{ font-size:22px; margin:0 0 4px; }
+#viewF .fdetail ul{ list-style:none; margin:0 0 22px; padding:0; border-top:1px solid var(--f-line); }
+#viewF .fdetail li{ display:flex; justify-content:space-between; gap:16px; padding:11px 0; border-bottom:1px solid var(--f-line); font-size:14.5px; }
+#viewF .fdetail li span:last-child{ color:var(--f-muted); text-align:right; }
+@media (max-width:700px){ #viewF .fdetail{ grid-template-columns:1fr; } }

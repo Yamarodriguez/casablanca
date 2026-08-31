@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Italiana&family=Jost:wght@200;300;400;500&family=Newsreader:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="assets/css/styles.css?v=5">
+<link rel="stylesheet" href="assets/css/styles.css?v=6">
 <link rel="preload" as="image" href="assets/img/f_pool.jpg" imagesrcset="assets/img/f_pool-900.jpg 900w, assets/img/f_pool.jpg 2100w" imagesizes="100vw">
 <style>html{color-scheme:light dark}body{margin:0}</style>
 </head>
@@ -55,9 +55,9 @@
       <b>CASABLANCA</b>
     </span>
     <nav class="fnav">
-      <a href="#f-casa">La villa</a>
+      <a href="#f-espacios">La villa</a>
       <a href="#f-vistas">Las vistas</a>
-      <a href="#f-espacios">Espacios</a>
+      <a href="#f-lounge">The Lounge</a>
       <a href="#f-galeria">Galería</a>
       <a href="#f-tarifas">Tarifas</a>
       <a href="#f-entorno">Ubicación</a>
@@ -66,21 +66,19 @@
     <a class="fcta" href="#f-reserva">Reservar</a>
   </header>
 
-  <!-- hero: la misma casa a dos horas del día -->
+  <!-- ══════════════════ PORTADA ══════════════════ -->
   <div class="fhero" id="fhero">
-    <div class="fstage">
-      <img class="on" src="assets/img/f_pool.jpg" srcset="assets/img/f_pool-900.jpg 900w, assets/img/f_pool.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" fetchpriority="high" alt="La villa y su piscina privada a mediodía">
-      <img src="assets/img/f_dusk.jpg" srcset="assets/img/f_dusk-900.jpg 900w, assets/img/f_dusk.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" fetchpriority="high" alt="La villa iluminada a la hora azul">
+    <div class="fmv" data-bg-embed="">
+      <img class="fmv__img" src="assets/img/f_pool.jpg" srcset="assets/img/f_pool-900.jpg 900w, assets/img/f_pool.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" fetchpriority="high" alt="La villa y su piscina privada al sol de la mañana">
     </div>
     <div class="fveil"></div>
     <div class="fhero__type">
       <h1 class="fhero__logo"><svg viewBox="0 0 3830 2161" role="img" aria-label="Casablanca Bellevue 131"><use href="#cb-full"></use></svg></h1>
-      <p>Una villa entera para usted, entre Marbella y el mar</p>
-      <div class="fhours" role="group" aria-label="Hora del día">
-        <button type="button" aria-pressed="true"  data-slide="0"><i></i>Mediodía</button>
-        <button type="button" aria-pressed="false" data-slide="1"><i></i>La hora azul</button>
-      </div>
+      <p class="fhero__tag">Suya. Solo suya.</p>
+      <p class="fhero__sub">Una villa privada frente al Mediterráneo, en las alturas de Marbella.</p>
+      <a class="fhero__cta" href="#f-reserva">Ver disponibilidad</a>
     </div>
+    <a class="fhero__down" href="#f-agua" aria-label="Descubrir la villa"><span></span></a>
   </div>
 
   <form class="fsearch" id="fsearch">
@@ -99,183 +97,119 @@
     <div><b class="ok">−15 %</b><span>Más barato que en los portales</span></div>
   </div>
 
-  <div class="wrapF">
-    <section class="fsec" id="f-casa">
-      <div class="fintro rv">
-        <div>
-          <span class="lbl">La villa</span>
-          <h2>Cal blanca, agua y una línea de mar al fondo.</h2>
-          <p style="margin-top:24px">Tres plantas de cal encalada, balaustradas y suelos de barro cocido, con la piscina pegada a la fachada y cuatro terrazas orientadas a distintas horas del día. La más alta se queda con el último sol y con el mar recortado detrás.</p>
-          <p>Casablanca Bellevue 131 se alquila entera: la villa, el jardín y la piscina son solo para su grupo. No se comparte con otros huéspedes ni con la propiedad.</p>
-        </div>
-        <div class="fspecs">
-          <div><b>10</b><span>Huéspedes máx.</span></div>
-          <div><b>5</b><span>Dormitorios</span></div>
-          <div><b>4</b><span>Baños</span></div>
-          <div><b>380 m²</b><span>Construidos</span></div>
-          <div><b>800 m²</b><span>Parcela privada</span></div>
-          <div><b>8 × 4 m</b><span>Piscina propia</span></div>
-        </div>
-      </div>
-    </section>
-  </div>
+  <!-- ══════════════════ ACTO I · SENTIR ══════════════════ -->
 
-  <!-- las vistas: la seña de identidad de la casa -->
-  <figure class="fview rv" id="f-vistas" style="margin:0">
-    <img src="assets/img/f_air.jpg" srcset="assets/img/f_air-900.jpg 900w, assets/img/f_air.jpg 1900w" sizes="100vw" width="1900" height="1019" decoding="async" loading="lazy" alt="La villa, su piscina y el mar al fondo, vistos desde el aire">
-    <figcaption><span>
-      <b>Entre la casa y el mar no hay nada.</b>
-      <em>Vista aérea · la parcela, la piscina y el horizonte en una sola imagen</em>
-    </span></figcaption>
-  </figure>
-
-  <div class="wrapF">
-    <section class="fsec fsec--line">
-      <div class="ftwo rv">
-        <div>
-          <span class="lbl">Las terrazas</span>
-          <h2>Cuatro alturas, cuatro horas del día.</h2>
-          <p>Cada terraza tiene su momento. La piscina recibe el sol de la mañana; el porche cubierto da sombra en las horas de calor; y la terraza alta —balaustrada blanca, barro cocido, palmeras y el mar detrás— es donde se cena y donde termina el día.</p>
-        </div>
-        <img src="assets/img/f_terr.jpg" srcset="assets/img/f_terr-900.jpg 900w, assets/img/f_terr.jpg 1700w" sizes="100vw" width="1700" height="1133" decoding="async" loading="lazy" alt="Terraza superior con sofás, balaustrada blanca y vistas abiertas">
-      </div>
-    </section>
-
-    <section class="fsec fsec--line" id="f-espacios">
-      <div class="fsec__h rv">
-        <span class="lbl">Espacios</span>
-        <h2>Cada espacio de la casa, con lo que de verdad ofrece.</h2>
-        <p>De los exteriores a los dormitorios, esto es lo que encontrará al llegar. Toque cada pestaña para verlo en detalle.</p>
-      </div>
-      <div class="ftabs" role="tablist">
-        <button class="ftab" role="tab" aria-selected="true"  data-ftab="p1">Exteriores y piscina</button>
-        <button class="ftab" role="tab" aria-selected="false" data-ftab="p2">Salón y cocina</button>
-        <button class="ftab" role="tab" aria-selected="false" data-ftab="p3">Dormitorios</button>
-        <button class="ftab" role="tab" aria-selected="false" data-ftab="p4">Apartamento independiente</button>
-      </div>
-      <div class="fpanel on" id="p1">
-        <img src="assets/img/f_pool.jpg" srcset="assets/img/f_pool-900.jpg 900w, assets/img/f_pool.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" fetchpriority="high" alt="Piscina privada junto a la fachada">
-        <div>
-          <h3>Exteriores y piscina</h3>
-          <p>La piscina recibe el sol de frente toda la mañana, pegada a la fachada y resguardada por el muro de la parcela. Alrededor, las zonas de estar van rotando con la sombra hasta la terraza alta.</p>
-          <ul>
-            <li><span>Piscina privada</span><span>8 × 4 m, sin climatizar</span></li>
-            <li><span>Tumbonas y sombrilla</span><span>6 plazas</span></li>
-            <li><span>Pérgola con mesa</span><span>10 comensales</span></li>
-            <li><span>Barbacoa de obra y de gas</span><span>Incluida</span></li>
-            <li><span>Terraza alta</span><span>Vistas abiertas al mar</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="fpanel" id="p2">
-        <img src="assets/img/a_comed.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="Comedor con ventanales en arco" style="object-position:72% 38%">
-        <div>
-          <h3>Salón y cocina</h3>
-          <p>Planta principal diáfana: salón con chimenea, comedor de diez bajo los arcos y cocina independiente totalmente equipada con salida al patio.</p>
-          <ul>
-            <li><span>Salón con chimenea</span><span>Smart TV</span></li>
-            <li><span>Comedor interior</span><span>10 comensales</span></li>
-            <li><span>Cocina equipada</span><span>Horno, lavavajillas, cafetera</span></li>
-            <li><span>Lavadora y secadora</span><span>Incluidas</span></li>
-            <li><span>Aire acondicionado</span><span>Frío y calor</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="fpanel" id="p3">
-        <img src="assets/img/f_dorm3.jpg" width="1400" height="933" decoding="async" loading="lazy" alt="Dormitorio con salida directa a la terraza">
-        <div>
-          <h3>Dormitorios</h3>
-          <p>Cinco dormitorios en dos plantas. El principal tiene baño propio y salida directa a la terraza, que es donde se desayuna.</p>
-          <ul>
-            <li><span>Principal</span><span>Cama 180, baño en suite, terraza</span></li>
-            <li><span>Dormitorio 2</span><span>Cama 150</span></li>
-            <li><span>Dormitorio 3</span><span>Cama 150</span></li>
-            <li><span>Dormitorios 4 y 5</span><span>2 camas de 90 cada uno</span></li>
-            <li><span>Cuna y trona</span><span>Bajo petición, sin coste</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="fpanel" id="p4">
-        <img src="assets/img/b_int.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="Salón del apartamento independiente de la planta baja">
-        <div>
-          <h3>Apartamento independiente</h3>
-          <p>En la planta baja, con entrada propia. Ideal para dos familias que viajan juntas, para los abuelos o para quien necesita trabajar unos días con tranquilidad.</p>
-          <ul>
-            <li><span>Entrada independiente</span><span>Sí</span></li>
-            <li><span>Salón y cocina propios</span><span>Sí</span></li>
-            <li><span>Baño completo</span><span>Ducha de obra</span></li>
-            <li><span>Zona de trabajo</span><span>Mesa y fibra óptica</span></li>
-            <li><span>Se incluye en el alquiler</span><span>Sin coste extra</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="fsec fsec--line">
-      <div class="fsec__h rv">
-        <span class="lbl">Incluido en el precio</span>
-        <h2>Todo lo que necesita, ya incluido.</h2>
-        <p>Sin suplementos por servicios básicos ni extras que aparecen al final. Lo que ve aquí viene con la casa.</p>
-      </div>
-      <div class="famen rv">
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.1" fill="currentColor" stroke="none"/></svg>Fibra óptica 600 Mb</div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2.5 18.5c2 0 2 1.5 4 1.5s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2.5 14.5c2 0 2 1.5 4 1.5s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M8 15V5.5a2 2 0 0 1 4 0M16 13V5.5a2 2 0 0 0-4 0M8 9.5h8"/></svg>Piscina privada</div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="5" width="19" height="9" rx="1.5"/><path d="M6 18h1.5M11 18h1.5M16 18h1.5"/></svg>Aire acondicionado</div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3.5 10.5h17M5.5 10.5 8 17M18.5 10.5 16 17M7.5 17h9M9 20.5l1-3.5M15 20.5l-1-3.5M8.5 3.5c0 1.4 1 1.4 1 2.8M12 3c0 1.6 1 1.6 1 3.3M15.5 3.5c0 1.4 1 1.4 1 2.8"/></svg>Barbacoa de obra</div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M9.5 17V7.5h3a2.6 2.6 0 0 1 0 5.2h-3"/></svg>Parking para 3 coches</div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="4.5"/><circle cx="8" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg>Lavadora y secadora</div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="4" width="19" height="12.5" rx="1.5"/><path d="M8.5 20h7"/></svg>Smart TV y Netflix</div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 5.5v13M20 5.5v13M4 9h16M4 16.5h16M8.7 9v7.5M12 9v7.5M15.3 9v7.5"/></svg>Cuna y trona</div>
-      </div>
-    </section>
-  </div>
-
-  <!-- capítulo nocturno: el impacto de «La hora azul» dentro de la web luminosa -->
-  <div class="fnight rv">
-    <img src="assets/img/b_logo.jpg" srcset="assets/img/b_logo-900.jpg 900w, assets/img/b_logo.jpg 1600w" sizes="100vw" width="1600" height="1067" decoding="async" loading="lazy" alt="La entrada de la villa con el rótulo iluminado al anochecer">
-    <div class="fnight__veil"></div>
-    <div class="fnight__type">
-      <div>
-        <span class="lbl">21:40</span>
-        <h2>La hora azul</h2>
-        <p>Cada tarde hay unos minutos en los que la fachada, el agua y el cielo se ponen del mismo color y la casa se enciende sola. Es el momento en que se entiende por qué se llama Casablanca.</p>
-      </div>
-    </div>
-  </div>
-
-  <section class="fsec fdark">
-    <div class="wrapF">
-      <div class="fsec__h rv">
-        <span class="lbl">En movimiento</span>
-        <h2 style="color:#F0ECE4">Cuatro planos para verla como se vive.</h2>
-        <p>El agua por la mañana, la terraza al atardecer, la fachada cuando se enciende y la llegada a la casa. Piezas cortas para hacerse una idea real antes de venir.</p>
-      </div>
-      <div class="fvert rv">
-        <figure data-cap="El agua" data-embed=""><span class="play"></span><img src="assets/img/v_pool.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la piscina y la fachada"><figcaption>El agua</figcaption></figure>
-        <figure data-cap="La hora azul" data-embed=""><span class="play"></span><img src="assets/img/v_dusk.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la casa encendida al anochecer"><figcaption>La hora azul</figcaption></figure>
-        <figure data-cap="La terraza alta"><img src="assets/img/v_terr.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la terraza alta"><figcaption>La terraza alta</figcaption></figure>
-        <figure data-cap="La llegada"><img src="assets/img/v_sign.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: el rótulo de la casa"><figcaption>La llegada</figcaption></figure>
-      </div>
-      <p style="margin:6px 0 0; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#8D96A3">Toque cualquiera para reproducirlo a pantalla completa</p>
-    </div>
+  <!-- El agua -->
+  <section class="fexp" id="f-agua" data-bg-embed="">
+    <img class="fexp__img" src="assets/img/f_pool.jpg" srcset="assets/img/f_pool-900.jpg 900w, assets/img/f_pool.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="La piscina privada al sol de la mañana">
+    <div class="fexp__veil"></div>
+    <div class="fexp__type"><div>
+      <span class="lbl">La piscina</span>
+      <h2>El día empieza en el agua.</h2>
+      <p>Ocho metros de piscina privada, el sol de frente y nadie alrededor.</p>
+    </div></div>
   </section>
 
+  <!-- Las terrazas -->
+  <section class="fexp fexp--right" data-bg-embed="">
+    <img class="fexp__img" src="assets/img/f_terr.jpg" srcset="assets/img/f_terr-900.jpg 900w, assets/img/f_terr.jpg 1700w" sizes="100vw" width="1700" height="1133" decoding="async" loading="lazy" alt="Terraza alta con balaustrada blanca y vistas abiertas">
+    <div class="fexp__veil"></div>
+    <div class="fexp__type"><div>
+      <span class="lbl">Las terrazas</span>
+      <h2>Afuera se vive mejor.</h2>
+      <p>Cuatro terrazas orientadas a cada hora de luz. La más alta se queda con el último sol.</p>
+    </div></div>
+  </section>
+
+  <!-- Las vistas -->
+  <section class="fexp" id="f-vistas">
+    <img class="fexp__img" src="assets/img/d_05.jpg" srcset="assets/img/d_05-900.jpg 900w, assets/img/d_05.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="La villa, su piscina y el Mediterráneo al fondo, vistos desde el aire">
+    <div class="fexp__veil"></div>
+    <div class="fexp__type"><div>
+      <span class="lbl">Las vistas</span>
+      <h2>Entre la casa y el mar, nada.</h2>
+      <p>Marbella a un lado, el Mediterráneo al fondo, el horizonte para usted solo.</p>
+    </div></div>
+  </section>
+
+  <!-- Del día a la noche -->
+  <section class="fdn">
+    <div class="fdn__stage">
+      <img class="fdn__a" src="assets/img/f_pool.jpg" srcset="assets/img/f_pool-900.jpg 900w, assets/img/f_pool.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="La villa a plena luz del día">
+      <img class="fdn__b" src="assets/img/f_dusk.jpg" srcset="assets/img/f_dusk-900.jpg 900w, assets/img/f_dusk.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="La villa iluminada a la hora azul">
+    </div>
+    <div class="fexp__veil"></div>
+    <div class="fexp__type"><div>
+      <span class="lbl">El crepúsculo</span>
+      <h2>Y entonces, la casa se enciende.</h2>
+      <p>El cielo, el agua y la fachada se ponen del mismo color. Es la hora azul.</p>
+    </div></div>
+  </section>
+
+  <!-- La noche -->
+  <section class="fexp fexp--dark fexp--right" data-bg-embed="">
+    <img class="fexp__img" src="assets/img/b_villa.jpg" srcset="assets/img/b_villa-900.jpg 900w, assets/img/b_villa.jpg 2000w" sizes="100vw" width="2000" height="1333" decoding="async" loading="lazy" alt="La fachada de la villa iluminada de noche">
+    <div class="fexp__veil"></div>
+    <div class="fexp__type"><div>
+      <span class="lbl">La noche</span>
+      <h2>La noche es larga, y es suya.</h2>
+      <p>Una cena que no termina, un baño a oscuras, el cielo entero encendido sobre el agua.</p>
+    </div></div>
+  </section>
+
+  <!-- Los espacios como experiencias -->
+  <div class="wrapF">
+    <section class="fsec" id="f-espacios">
+      <div class="fsec__h rv">
+        <span class="lbl">La casa</span>
+        <h2>Cada espacio, una manera de estar.</h2>
+        <p>De la piscina al último dormitorio, la villa se recorre despacio.</p>
+      </div>
+      <div class="frooms rv">
+        <article class="froom">
+          <img src="assets/img/a_porch.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="Porche y zona de estar exterior">
+          <div><h3>Al aire libre</h3><p>Piscina, pérgola y brasa para los días que no piden nada más.</p></div>
+        </article>
+        <article class="froom">
+          <img src="assets/img/a_comed.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="Salón y comedor bajo los arcos">
+          <div><h3>El corazón de la casa</h3><p>Salón con chimenea y una gran mesa donde acaban todas las noches.</p></div>
+        </article>
+        <article class="froom">
+          <img src="assets/img/a_dorm1.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="Dormitorio principal">
+          <div><h3>El descanso</h3><p>Cinco dormitorios; el principal abre directo a la terraza.</p></div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- The Lounge -->
+  <section class="fexp fexp--dark" id="f-lounge" data-bg-embed="">
+    <img class="fexp__img" src="assets/img/b_int.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="The Lounge, el espacio de la planta baja">
+    <div class="fexp__veil"></div>
+    <div class="fexp__type"><div>
+      <span class="lbl">The Lounge</span>
+      <h2>Abajo, la noche es solo de los suyos.</h2>
+      <p>Un espacio propio para la música, una copa de vino y la conversación que se alarga.</p>
+    </div></div>
+  </section>
+
+  <!-- El reportaje: película, dron y tour -->
   <div class="wrapF">
     <section class="fsec fsec--line">
       <div class="fsec__h rv">
-        <span class="lbl">Antes de reservar</span>
-        <h2>Véala entera sin moverse de casa.</h2>
-        <p>El vídeo le cuenta cómo se vive la villa, el dron le enseña dónde está y a qué distancia queda el mar, y el tour de 360° le deja recorrerla habitación por habitación.</p>
+        <span class="lbl">El reportaje</span>
+        <h2>Véala como se vive.</h2>
+        <p>La película le cuenta cómo se vive la villa; el dron le enseña dónde está; el tour de 360° le deja recorrerla habitación por habitación.</p>
       </div>
       <div class="fmedia rv">
-        <button type="button" class="fmcard" data-cap="Vídeo de la villa" data-embed="">
-          <img src="assets/img/f_dusk.jpg" srcset="assets/img/f_dusk-900.jpg 900w, assets/img/f_dusk.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" fetchpriority="high" alt="Vídeo de la villa">
-          <span class="badge">▶ Vídeo · 1:40</span>
+        <button type="button" class="fmcard" data-cap="La película de la villa" data-embed="">
+          <img src="assets/img/f_dusk.jpg" srcset="assets/img/f_dusk-900.jpg 900w, assets/img/f_dusk.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="La película de la villa">
+          <span class="badge">▶ La película</span>
           <span class="ov"><b>La casa en movimiento</b><span>Del mediodía a la hora azul</span></span>
         </button>
-        <button type="button" class="fmcard" data-cap="Vista de dron · 0:50">
-          <img src="assets/img/f_air.jpg" srcset="assets/img/f_air-900.jpg 900w, assets/img/f_air.jpg 1900w" sizes="100vw" width="1900" height="1019" decoding="async" loading="lazy" alt="Vídeo de dron">
-          <span class="badge">▶ Dron · 0:50</span>
+        <button type="button" class="fmcard" data-cap="Vista de dron" data-embed="">
+          <img src="assets/img/f_air.jpg" srcset="assets/img/f_air-900.jpg 900w, assets/img/f_air.jpg 1900w" sizes="100vw" width="1900" height="1019" decoding="async" loading="lazy" alt="Vista de dron">
+          <span class="badge">▶ Dron</span>
           <span class="ov"><b>Dónde está</b><span>La parcela, la piscina y el mar al fondo</span></span>
         </button>
         <button type="button" class="fmcard" data-cap="Tour virtual de 360°">
@@ -286,10 +220,26 @@
       </div>
     </section>
 
+    <!-- Reportaje vertical -->
+    <section class="fsec fsec--line">
+      <div class="fsec__h rv">
+        <span class="lbl">En movimiento</span>
+        <h2>Cuatro planos verticales.</h2>
+        <p>El agua, la hora azul, la terraza alta y la llegada. Piezas cortas, tal como se sienten.</p>
+      </div>
+      <div class="fvert rv">
+        <figure data-cap="El agua" data-embed=""><span class="play"></span><img src="assets/img/v_pool.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la piscina y la fachada"><figcaption>El agua</figcaption></figure>
+        <figure data-cap="La hora azul" data-embed=""><span class="play"></span><img src="assets/img/v_dusk.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la casa encendida al anochecer"><figcaption>La hora azul</figcaption></figure>
+        <figure data-cap="La terraza alta"><img src="assets/img/v_terr.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: la terraza alta"><figcaption>La terraza alta</figcaption></figure>
+        <figure data-cap="La llegada"><img src="assets/img/v_sign.jpg" width="760" height="1351" decoding="async" loading="lazy" alt="Vertical: el rótulo de la casa"><figcaption>La llegada</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Galería -->
     <section class="fsec fsec--line" id="f-galeria">
       <div class="fsec__h rv">
         <span class="lbl">Galería</span>
-        <h2>La casa en imágenes.</h2>
+        <h2>El reportaje completo.</h2>
         <p>Arquitectura y piscina, terrazas y vistas, interiores, la hora azul e imágenes en altura. Elija qué quiere ver y toque una foto para ampliarla.</p>
       </div>
       <div class="fchips" role="group" aria-label="Filtrar galería">
@@ -301,7 +251,7 @@
         <button class="fchip" aria-pressed="false" data-ff="dron">Imágenes en altura</button>
       </div>
       <div class="fgrid" id="fgrid">
-        <button type="button" data-c="arq" data-cap="La piscina y la fachada"><img src="assets/img/f_pool.jpg" srcset="assets/img/f_pool-900.jpg 900w, assets/img/f_pool.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" fetchpriority="high" alt="Piscina y fachada"></button>
+        <button type="button" data-c="arq" data-cap="La piscina y la fachada"><img src="assets/img/f_pool.jpg" srcset="assets/img/f_pool-900.jpg 900w, assets/img/f_pool.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="Piscina y fachada"></button>
         <button type="button" data-c="arq" data-cap="Vista aérea: la casa y el mar"><img src="assets/img/f_air.jpg" srcset="assets/img/f_air-900.jpg 900w, assets/img/f_air.jpg 1900w" sizes="100vw" width="1900" height="1019" decoding="async" loading="lazy" alt="Vista aérea de la casa y el mar"></button>
         <button type="button" data-c="arq" data-cap="Escalera exterior y balaustradas"><img src="assets/img/f_arch.jpg" width="1400" height="933" decoding="async" loading="lazy" alt="Escalera exterior"></button>
         <button type="button" data-c="arq" data-cap="El portón de entrada"><img src="assets/img/f_hall.jpg" width="1200" height="1800" decoding="async" loading="lazy" alt="Portón de entrada"></button>
@@ -313,7 +263,7 @@
         <button type="button" data-c="int" data-cap="Cocina equipada"><img src="assets/img/a_coci.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="Cocina"></button>
         <button type="button" data-c="int" data-cap="Dormitorio principal"><img src="assets/img/a_dorm1.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="Dormitorio principal"></button>
         <button type="button" data-c="int" data-cap="Baño reformado"><img src="assets/img/a_bano.jpg" width="1100" height="733" decoding="async" loading="lazy" alt="Baño"></button>
-        <button type="button" data-c="int" data-cap="Apartamento independiente"><img src="assets/img/b_int.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="Apartamento independiente"></button>
+        <button type="button" data-c="int" data-cap="The Lounge"><img src="assets/img/b_int.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="The Lounge, en la planta baja"></button>
         <button type="button" data-c="noc" data-cap="La piscina al anochecer"><img src="assets/img/b_pool2.jpg" srcset="assets/img/b_pool2-900.jpg 900w, assets/img/b_pool2.jpg 1500w" sizes="100vw" width="1500" height="1000" decoding="async" loading="lazy" alt="Piscina al anochecer"></button>
         <button type="button" data-c="noc" data-cap="La fachada encendida"><img src="assets/img/b_villa.jpg" srcset="assets/img/b_villa-900.jpg 900w, assets/img/b_villa.jpg 2000w" sizes="100vw" width="2000" height="1333" decoding="async" loading="lazy" alt="Fachada iluminada"></button>
         <button type="button" data-c="noc" data-cap="El jardín de olivos"><img src="assets/img/b_jard.jpg" width="1200" height="800" decoding="async" loading="lazy" alt="Jardín de olivos"></button>
@@ -326,27 +276,95 @@
         <button type="button" data-c="dron" data-cap="Vista cenital de toda la parcela"><img src="assets/img/d_07.jpg" srcset="assets/img/d_07-900.jpg 900w, assets/img/d_07.jpg 2100w" sizes="100vw" width="2100" height="1400" decoding="async" loading="lazy" alt="Vista cenital de la parcela"></button>
       </div>
     </section>
+  </div>
 
-    <section class="fsec fsec--line" id="f-tarifas">
+  <!-- ══════════════════ ACTO II · INFORMAR ══════════════════ -->
+  <div class="wrapF">
+    <section class="fsec fsec--line" id="f-casa">
+      <div class="fintro rv">
+        <div>
+          <span class="lbl">La villa</span>
+          <h2>La ficha, en breve.</h2>
+          <p style="margin-top:24px">Casablanca Bellevue 131 se alquila entera: la villa, el jardín y la piscina son solo para su grupo. No se comparte con otros huéspedes ni con la propiedad.</p>
+          <p>Tres plantas de cal blanca, balaustradas y suelos de barro cocido, con cuatro terrazas orientadas a distintas horas del día.</p>
+        </div>
+        <div class="fspecs">
+          <div><b>10</b><span>Huéspedes máx.</span></div>
+          <div><b>5</b><span>Dormitorios</span></div>
+          <div><b>4</b><span>Baños</span></div>
+          <div><b>380 m²</b><span>Construidos</span></div>
+          <div><b>800 m²</b><span>Parcela privada</span></div>
+          <div><b>8 × 4 m</b><span>Piscina propia</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fsec fsec--line">
       <div class="fsec__h rv">
-        <span class="lbl">Tarifas 2026</span>
-        <h2>Precio por noche, la casa entera.</h2>
-        <p>La tarifa es la misma para cualquier grupo de hasta diez huéspedes. Se añaden una limpieza final de 180 € y una fianza reembolsable de 500 €.</p>
+        <span class="lbl">En detalle</span>
+        <h2>Todo lo que encontrará.</h2>
+        <p>El detalle de cada planta, sin sorpresas.</p>
       </div>
-      <p class="fscroll">Deslice la tabla →</p>
-      <div class="frates-wrap rv">
-        <table class="frates">
-          <thead><tr><th>Temporada</th><th>Fechas</th><th>Desde</th><th>Mínimo</th><th>Disponibilidad</th><th></th></tr></thead>
-          <tbody>
-            <tr><td>Temporada baja</td><td>Nov – Mar</td><td class="price">390 €</td><td>3 noches</td><td><span class="fpill fpill--ok">Amplia</span></td><td><a href="#f-reserva" style="color:var(--f-sea);font-weight:600">Reservar</a></td></tr>
-            <tr><td>Temporada media</td><td>Abr – Jun · Oct</td><td class="price">520 €</td><td>4 noches</td><td><span class="fpill fpill--ok">Amplia</span></td><td><a href="#f-reserva" style="color:var(--f-sea);font-weight:600">Reservar</a></td></tr>
-            <tr><td>Temporada alta</td><td>Sep</td><td class="price">690 €</td><td>5 noches</td><td><span class="fpill fpill--low">Quedan 9 días</span></td><td><a href="#f-reserva" style="color:var(--f-sea);font-weight:600">Reservar</a></td></tr>
-            <tr><td>Temporada punta</td><td>Jul – Ago</td><td class="price">890 €</td><td>7 noches</td><td><span class="fpill fpill--no">Completo</span></td><td><span style="color:var(--f-muted)">Lista de espera</span></td></tr>
-            <tr><td>Navidad y Fin de Año</td><td>20 dic – 6 ene</td><td class="price">750 €</td><td>7 noches</td><td><span class="fpill fpill--low">Quedan 4 días</span></td><td><a href="#f-reserva" style="color:var(--f-sea);font-weight:600">Reservar</a></td></tr>
-          </tbody>
-        </table>
+      <div class="fdetail rv">
+        <div>
+          <h3>Exteriores y piscina</h3>
+          <ul>
+            <li><span>Piscina privada</span><span>8 × 4 m, sin climatizar</span></li>
+            <li><span>Tumbonas y sombrilla</span><span>6 plazas</span></li>
+            <li><span>Pérgola con mesa</span><span>10 comensales</span></li>
+            <li><span>Barbacoa de obra y de gas</span><span>Incluida</span></li>
+            <li><span>Terraza alta</span><span>Vistas abiertas al mar</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Salón y cocina</h3>
+          <ul>
+            <li><span>Salón con chimenea</span><span>Smart TV</span></li>
+            <li><span>Comedor interior</span><span>10 comensales</span></li>
+            <li><span>Cocina equipada</span><span>Horno, lavavajillas, cafetera</span></li>
+            <li><span>Lavadora y secadora</span><span>Incluidas</span></li>
+            <li><span>Aire acondicionado</span><span>Frío y calor</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Dormitorios</h3>
+          <ul>
+            <li><span>Principal</span><span>Cama 180, baño en suite, terraza</span></li>
+            <li><span>Dormitorio 2</span><span>Cama 150</span></li>
+            <li><span>Dormitorio 3</span><span>Cama 150</span></li>
+            <li><span>Dormitorios 4 y 5</span><span>2 camas de 90 cada uno</span></li>
+            <li><span>Cuna y trona</span><span>Bajo petición, sin coste</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>The Lounge</h3>
+          <ul>
+            <li><span>Planta baja con entrada propia</span><span>Sí</span></li>
+            <li><span>Salón de estar y cocina</span><span>Sí</span></li>
+            <li><span>Baño completo</span><span>Ducha de obra</span></li>
+            <li><span>Rincón de trabajo</span><span>Mesa y fibra óptica</span></li>
+            <li><span>Incluido en el alquiler</span><span>Sin coste extra</span></li>
+          </ul>
+        </div>
       </div>
-      <p style="margin:20px 0 0; font-size:13px; color:var(--f-muted)">Estancias largas: 10 % de descuento a partir de 14 noches y 15 % a partir de 28. Escríbanos para conocer la tarifa exacta de sus fechas.</p>
+    </section>
+
+    <section class="fsec fsec--line">
+      <div class="fsec__h rv">
+        <span class="lbl">Incluido en el precio</span>
+        <h2>Sin extras que aparecen al final.</h2>
+        <p>Lo que ve aquí viene con la casa, sin suplementos por servicios básicos.</p>
+      </div>
+      <div class="famen rv">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.1" fill="currentColor" stroke="none"/></svg>Fibra óptica 600 Mb</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2.5 18.5c2 0 2 1.5 4 1.5s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2.5 14.5c2 0 2 1.5 4 1.5s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M8 15V5.5a2 2 0 0 1 4 0M16 13V5.5a2 2 0 0 0-4 0M8 9.5h8"/></svg>Piscina privada</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="5" width="19" height="9" rx="1.5"/><path d="M6 18h1.5M11 18h1.5M16 18h1.5"/></svg>Aire acondicionado</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3.5 10.5h17M5.5 10.5 8 17M18.5 10.5 16 17M7.5 17h9M9 20.5l1-3.5M15 20.5l-1-3.5M8.5 3.5c0 1.4 1 1.4 1 2.8M12 3c0 1.6 1 1.6 1 3.3M15.5 3.5c0 1.4 1 1.4 1 2.8"/></svg>Barbacoa de obra</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M9.5 17V7.5h3a2.6 2.6 0 0 1 0 5.2h-3"/></svg>Parking para 3 coches</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="4.5"/><circle cx="8" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg>Lavadora y secadora</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="4" width="19" height="12.5" rx="1.5"/><path d="M8.5 20h7"/></svg>Smart TV y Netflix</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 5.5v13M20 5.5v13M4 9h16M4 16.5h16M8.7 9v7.5M12 9v7.5M15.3 9v7.5"/></svg>Cuna y trona</div>
+      </div>
     </section>
 
     <section class="fsec fsec--line" id="f-entorno">
@@ -383,13 +401,35 @@
       </div>
     </section>
 
+    <section class="fsec fsec--line" id="f-tarifas">
+      <div class="fsec__h rv">
+        <span class="lbl">Tarifas 2026</span>
+        <h2>Precio por noche, la casa entera.</h2>
+        <p>La tarifa es la misma para cualquier grupo de hasta diez huéspedes. Se añaden una limpieza final de 180 € y una fianza reembolsable de 500 €.</p>
+      </div>
+      <p class="fscroll">Deslice la tabla →</p>
+      <div class="frates-wrap rv">
+        <table class="frates">
+          <thead><tr><th>Temporada</th><th>Fechas</th><th>Desde</th><th>Mínimo</th><th>Disponibilidad</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Temporada baja</td><td>Nov – Mar</td><td class="price">390 €</td><td>3 noches</td><td><span class="fpill fpill--ok">Amplia</span></td><td><a href="#f-reserva" style="color:var(--f-sea);font-weight:600">Reservar</a></td></tr>
+            <tr><td>Temporada media</td><td>Abr – Jun · Oct</td><td class="price">520 €</td><td>4 noches</td><td><span class="fpill fpill--ok">Amplia</span></td><td><a href="#f-reserva" style="color:var(--f-sea);font-weight:600">Reservar</a></td></tr>
+            <tr><td>Temporada alta</td><td>Sep</td><td class="price">690 €</td><td>5 noches</td><td><span class="fpill fpill--low">Quedan 9 días</span></td><td><a href="#f-reserva" style="color:var(--f-sea);font-weight:600">Reservar</a></td></tr>
+            <tr><td>Temporada punta</td><td>Jul – Ago</td><td class="price">890 €</td><td>7 noches</td><td><span class="fpill fpill--no">Completo</span></td><td><span style="color:var(--f-muted)">Lista de espera</span></td></tr>
+            <tr><td>Navidad y Fin de Año</td><td>20 dic – 6 ene</td><td class="price">750 €</td><td>7 noches</td><td><span class="fpill fpill--low">Quedan 4 días</span></td><td><a href="#f-reserva" style="color:var(--f-sea);font-weight:600">Reservar</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin:20px 0 0; font-size:13px; color:var(--f-muted)">Estancias largas: 10 % de descuento a partir de 14 noches y 15 % a partir de 28. Escríbanos para conocer la tarifa exacta de sus fechas.</p>
+    </section>
+
     <section class="fsec fsec--line" id="f-faq">
       <div class="fsec__h rv">
         <span class="lbl">Preguntas frecuentes</span>
         <h2>Todo lo que conviene saber antes de reservar.</h2>
         <p>Y si le queda alguna duda, escríbanos o llámenos: le respondemos el mismo día.</p>
       </div>
-      <details open><summary>¿Se alquila la casa entera?</summary><p>Sí. El alquiler incluye la villa completa, la piscina, el jardín y el apartamento independiente de la planta baja. No se comparte con otros huéspedes ni con la propiedad.</p></details>
+      <details open><summary>¿Se alquila la casa entera?</summary><p>Sí. El alquiler incluye la villa completa, la piscina, el jardín y The Lounge de la planta baja. No se comparte con otros huéspedes ni con la propiedad.</p></details>
       <details><summary>¿Cuál es el horario de entrada y salida?</summary><p>Entrada a partir de las 16:00 y salida antes de las 11:00. Reservando directamente, la entrada anticipada y la salida tardía son gratuitas siempre que no haya otra estancia ese mismo día.</p></details>
       <details><summary>¿Se admiten mascotas?</summary><p>Sí, hasta dos perros de tamaño medio, avisando en el momento de la reserva. Sin suplemento.</p></details>
       <details><summary>¿La piscina está climatizada?</summary><p>No. Es una piscina exterior sin climatizar, cómoda de mayo a octubre. Se puede contratar una bomba de calor por temporada con antelación.</p></details>
@@ -399,6 +439,7 @@
       <details><summary>¿Cómo se paga?</summary><p>30 % en el momento de reservar y el resto siete días antes de la entrada, por transferencia o tarjeta. La fianza de 500 € se devuelve en las 72 horas siguientes a la salida.</p></details>
     </section>
 
+    <!-- ══════════════════ ACTO III · RESERVAR ══════════════════ -->
     <section class="fsec" id="f-reserva">
       <div class="fbook rv">
         <div>
@@ -448,9 +489,9 @@
         </div>
         <div><h4>La villa</h4><ul>
           <li><a href="#f-vistas">Las vistas</a></li>
-          <li><a href="#f-espacios">Espacios</a></li>
+          <li><a href="#f-espacios">Los espacios</a></li>
+          <li><a href="#f-lounge">The Lounge</a></li>
           <li><a href="#f-galeria">Galería y vídeo</a></li>
-          <li><a href="#f-galeria">Tour virtual 360°</a></li>
         </ul></div>
         <div><h4>Reservar</h4><ul>
           <li><a href="#f-tarifas">Tarifas y temporadas</a></li>
@@ -481,6 +522,6 @@
 </div>
 
 </main>
-<script src="assets/js/app.js?v=5"></script>
+<script src="assets/js/app.js?v=6"></script>
 </body>
 </html>
